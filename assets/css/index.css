@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    height: 5rem;
+    height: 80px;
     padding: 1rem;
     background: transparent;
     color: var(--white);
@@ -12,7 +12,7 @@ header {
 
 header img {
     width: 200px;
-    height: 2rem;
+    height: 80%;
 }
 
 header select {
@@ -23,6 +23,10 @@ header select {
     padding: .4rem; 
 }
 
+header select option {
+    background-color: var(--black);
+}
+
 header button {
     background-color: var(--red);
     color: inherit;
@@ -30,6 +34,7 @@ header button {
     padding: .5rem;
     border-radius: 5px;
     min-width: 90px;
+    margin-left: 1rem;
 }
 
 .container {
@@ -54,12 +59,16 @@ form h1 {
 form h4 {
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
 }
 
 form #sign {
-    height: 2rem;
+    height: 3rem;
     margin-top: 1rem;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
 }
 
 form #sign input,
@@ -67,8 +76,31 @@ form #sign button {
     height: 100%;
 }
 
+form #sign input {
+    width: 90%;
+    font-size: inherit;
+    border: 1px solid var(--grey-200);
+    border-radius: 3px 0 0 3px;
+}
+
+form #sign input:focus {
+    outline: 1px solid var(--blue);
+}
+
+form #sign button {
+    color: inherit;
+    background-color: var(--red);
+    border: none;
+    border-radius: 0 3px 3px 0;
+    padding: .5rem;
+    width: 200px;
+    font-size: inherit;
+}
+
 .background {
     background-image: url(../img/bg-index.webp);
+    background-size: cover;
+
     width: 100vw;
     height: 100vh;
 

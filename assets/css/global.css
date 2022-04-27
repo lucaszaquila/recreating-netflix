@@ -1,11 +1,15 @@
 :root { 
     --red: #e50914;
     --blue: #0071eb;
+    --orange: #e87c03;
 
 
     --white: #ffffff;
     --grey-200: #d3d3d3;
+    --grey-300: #666;
+    --grey-500: #333;
     --black: #151515;
+    --black-transparent: rgba(0, 0, 0, .7);
 }
 
 * {
@@ -19,7 +23,7 @@ body {
 }
 
 body, input, textarea, button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
@@ -29,6 +33,23 @@ h1, h2, h3, h4, h5, h6, strong {
 
 button { 
     cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input:focus {
+    outline: 1px solid var(--blue);
+}
+
+button, a {
+    transition: filter 1s;
+}
+
+button:hover, a:hover {
+    filter: brightness(1.2);
 }
 
 [disabled] {
@@ -45,5 +66,132 @@ button {
 @media (max-width: 720px) {
     html { 
         font-size: 87.5%;
+    }
+}
+
+/* ----------------------------- */
+
+header {
+    width: 100%;
+    height: 130px;
+    padding: 2em;
+    background: transparent;
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 200px;
+    height: 50px;
+}
+
+header select {
+    background: transparent;
+    color: inherit;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    padding: .4em; 
+    position: relative;
+}
+
+header select option {
+    background-color: var(--black);
+}
+
+header .login-button {
+    background-color: var(--red);
+    color: inherit;
+    border: none;
+    padding: .5em 1.5em;
+    border-radius: 5px;
+    margin-left: 1em;
+}
+
+.container {
+    height: calc(100vh - 130px);
+    color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    background-image: url(../img/bg-index.webp);
+    background-size: cover;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    filter: blur(1px) brightness(.3);
+    -webkit-box-shadow: inset 0px 0px 90px 85px rgba(0,0,0,0.85); 
+    box-shadow: inset 0px 0px 90px 85px rgba(0,0,0,0.85);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--black-transparent);
+    color: var(--grey-300);
+    padding: 3em;
+}
+
+footer .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer p:first-child {
+    font-size: 1.3em;
+}
+
+footer ul {
+    list-style: none;
+    margin: 1.5em 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+footer ul li {
+    flex-basis: 20%;
+}
+
+@media (max-width: 1080px) {
+    footer ul li{
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 720px) {
+    header {
+        height: 80px;
+        padding: 1em 1.5em;
+    }
+
+    header img {
+        width: 90px;
+    }
+
+    header .login-button {
+        margin: 0;
+        padding: .5rem 1em;
+    }
+
+    .container {
+        height: calc(100vh - 80px);
+    }
+
+    footer ul li{
+        flex-basis: 45%;
     }
 }

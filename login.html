@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
-
     <title>Netflix</title>
 </head>
 <body>
@@ -19,24 +18,46 @@
         <a href="./index.html">
             <img src="./assets/img/netflix-logo.svg" alt="Netflix">
         </a>
-        <div>
-            <select name="language" id="language">
-                <option value="pt">Português</option>
-                <option value="en">Inglês</option>
-            </select>
-            <a href="./login.html" class="login-button">Entrar</a>
-        </div>
+       
+        <select name="language" id="language">
+            <option value="pt">Português</option>
+            <option value="en">Inglês</option>
+        </select>
     </header>
 
     <div class="container">
-        <form id="new-user">
-            <h1>Filmes, séries e muito mais. Sem limites.</h1>
-            <h4>Assista onde quiser. Cancele quando quiser.</h4>
-            <p>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</p>
-            <div id="sign">
-                <input type="email">
-                <button type="submit">Vamos lá</button>
+        <form action="">
+            <h1>Entrar</h1>
+            <input 
+                type="text" 
+                name="email-phone" 
+                id="email-phone" 
+                placeholder="Email ou número de telefone"
+            >
+            <input 
+                type="password" 
+                name="password" 
+                id="password"
+                placeholder="Senha"
+            >
+
+            <button>Entrar</button>
+            <div class="options">
+                <div>
+                    <input type="checkbox" name="remember" id="remember">
+                    <span>Lembre-se de mim</span>
+                </div>
+                <a href="#">Precisa de ajuda?</a>
             </div>
+
+            <div class="login-facebook">
+                <img src="./assets/img/facebook-square-brands.svg"> <p>Conectar com Facebook</p>
+            </div>
+            <p>Novo por aqui? <a href="#">Assine agora</a></p>
+            <p>
+                Esta página é protegida pelo Google reCAPTCHA para garantir 
+                que você não é um robô. <a href="#">Saiba mais.</a>
+            </p>
         </form>
     </div>
     
